@@ -12,23 +12,31 @@ import { PerfilService } from './../perfil.service';
 export class FormPerfilComponent implements OnInit {
   cadPerfil = {
     "usuario": null,
-    "nome": "",
-    "sexo": "",
-    "cpf": "",
-    "telefone": "",
-    "endereco": "",
-    "estado_uf": "",
-    "cidade": "",
-    "cep": ""
-}
+    "nome": null,
+    "sexo": null,
+    "cpf": null,
+    "telefone": null,
+    "endereco": null,
+    "estado_uf": null,
+    "cidade": null,
+    "cep": null
+  };
+  perfil: any;
+  temPerfil = null
+
   constructor(public auth$: AuthService, private perfil$: PerfilService, private router: Router) { }
 
-  ngOnInit() {
+  ngOnInit(): void {
     const user = this.auth$.user();
-
-    
     if (user) {
       this.cadPerfil.usuario = user.id;
+      this.perfil$.perfilLogado()
+        .subscribe(
+          dados => this.perfil = dados,
+          erro => this.temPerfil = false
+        );
+      console.log("Perfil: ", this.perfil)
+      console.log("TemPerfil: ",this.temPerfil)
     }else{
       this.router.navigate(['/login']);
     }

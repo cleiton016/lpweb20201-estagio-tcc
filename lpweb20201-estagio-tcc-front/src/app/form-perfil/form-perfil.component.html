@@ -24,10 +24,10 @@
         <div class="col-md-3 mb-3">
           <label for="estado">Sexo</label>
           <div>
-            <input type='radio' class="m-1" name="sexo" [(ngModel)]= "cadPerfil.sexo" id='Masculino' value="Masculino">
+            <input type='radio' class="m-1" name="sexo" [(ngModel)]= "cadPerfil.sexo" id='Masculino' value="M">
             <label for="Masculino"
             >Masculino</label>
-            <input type="radio" class="m-1" name='sexo' [(ngModel)]= "cadPerfil.sexo" id='Feminino' value="Feminino">
+            <input type="radio" class="m-1" name='sexo' [(ngModel)]= "cadPerfil.sexo" id='Feminino' value="F">
             <label for="Feminino">Feminino</label>
           </div>
           <div class="invalid-feedback">
@@ -90,8 +90,12 @@
           Por favor, insira seu CEP.
         </div>
       </div>
-
-      <button class="btn btn-primary btn-lg" type="submit" [disabled]="cadastro.invalid">Salvar</button>
+      <div>
+        <button class="btn btn-primary btn-lg" type="submit" [disabled]="cadastro.invalid">Salvar</button>
+        <button class="btn btn-outline-primary btn-lg ml-3" [routerLink]="['/']">
+          <i class="fas fa-chevron-circle-left mr-1"></i>Voltar</button>
+          <p>Teste: {{ perfil.username}}</p>
+      </div>
     </form>
   </div>
 </div>

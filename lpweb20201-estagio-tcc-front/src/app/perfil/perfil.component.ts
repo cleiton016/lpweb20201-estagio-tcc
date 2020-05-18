@@ -24,6 +24,7 @@ export class PerfilComponent implements OnInit {
           dados => this.perfil = dados,
           erro => this.temPerfil = false
         );
+      
     } else {
       this.router.navigate(['/login']);
     }

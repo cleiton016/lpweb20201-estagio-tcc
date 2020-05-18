@@ -18,7 +18,8 @@ export class PerfilService {
 
   cadastraPerfil(form: any){
     console.log(this.auth$.httpOptions())
-     return this.http.post(
-       environment.API_URL.concat('perfis/'),JSON.stringify(form),this.auth$.httpOptions());
+     return this.http.post(environment.API_URL.concat('perfis/'),
+        JSON.stringify(form),
+        this.auth$.httpOptions());
   }
 }
