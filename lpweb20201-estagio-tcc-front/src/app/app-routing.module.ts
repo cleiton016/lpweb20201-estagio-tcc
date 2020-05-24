@@ -5,6 +5,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
 import { FormPerfilComponent } from './form-perfil/form-perfil.component';
+import { FormEditPerfilComponent } from './form-edit-perfil/form-edit-perfil.component';
 
 
 const routes: Routes = [
@@ -12,6 +13,7 @@ const routes: Routes = [
   { path: 'perfil', component: PerfilComponent },
   { path: 'sobre', component: SobreComponent },
   { path: 'form-perfil', component: FormPerfilComponent },
+  { path: 'form-edit-perfil', component: FormEditPerfilComponent},
   { path: '', redirectTo: '/login', pathMatch: 'full' },
   { path: '**', component: PaginaNaoEncontradaComponent }
 ];

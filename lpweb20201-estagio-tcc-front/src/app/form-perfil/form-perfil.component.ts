@@ -21,22 +21,14 @@ export class FormPerfilComponent implements OnInit {
     "cidade": null,
     "cep": null
   };
-  perfil: any;
-  temPerfil = null
+  user = null
 
   constructor(public auth$: AuthService, private perfil$: PerfilService, private router: Router) { }
 
   ngOnInit(): void {
-    const user = this.auth$.user();
-    if (user) {
-      this.cadPerfil.usuario = user.id;
-      this.perfil$.perfilLogado()
-        .subscribe(
-          dados => this.perfil = dados,
-          erro => this.temPerfil = false
-        );
-      console.log("Perfil: ", this.perfil)
-      console.log("TemPerfil: ",this.temPerfil)
+    this.user = this.auth$.user();
+    if (this.user) {
+      this.cadPerfil.usuario = this.user.id;
     }else{
       this.router.navigate(['/login']);
     }

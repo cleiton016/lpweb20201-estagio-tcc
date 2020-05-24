@@ -22,4 +22,11 @@ export class PerfilService {
         JSON.stringify(form),
         this.auth$.httpOptions());
   }
+
+  editarPerfil(form: any){
+    console.log(this.auth$.httpOptions())
+     return this.http.put(environment.API_URL.concat('perfis/'+form.usuario+'/'),
+        JSON.stringify(form),
+        this.auth$.httpOptions());
+  }
 }

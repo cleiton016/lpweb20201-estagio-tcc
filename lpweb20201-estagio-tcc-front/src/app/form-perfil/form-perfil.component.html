@@ -1,10 +1,10 @@
 <div class="container">
   <div class="col">
-    <h4 class="mb-3">Perfil do Usuario</h4>
+    <h4 class="mb-3">Cadastrar perfil do Usuario</h4>
     <form class="needs-validation" #cadastro = "ngForm" (submit)="cadastraPerfil()" name="cadastro_de_perfil">
       <div class="mb-3">
         <label for="Usuario">Usuario</label>
-        <input type="text" class="form-control" id="Usuario" [value]="cadPerfil.usuario" disabled required="">
+        <input type="text" class="form-control" id="Usuario" [value]="user.username" disabled required="">
         <div class="invalid-feedback">
           É obrigatório inserir um Usuario válido.
         </div>
@@ -94,7 +94,6 @@
         <button class="btn btn-primary btn-lg" type="submit" [disabled]="cadastro.invalid">Salvar</button>
         <button class="btn btn-outline-primary btn-lg ml-3" [routerLink]="['/']">
           <i class="fas fa-chevron-circle-left mr-1"></i>Voltar</button>
-          <p>Teste: {{ perfil.username}}</p>
       </div>
     </form>
   </div>
