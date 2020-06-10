@@ -25,7 +25,7 @@ export class PerfilService {
 
   editarPerfil(form: any){
     console.log(this.auth$.httpOptions())
-     return this.http.put(environment.API_URL.concat('perfis/'+form.usuario+'/'),
+     return this.http.put(environment.API_URL.concat('perfis/'+form.id+'/'),
         JSON.stringify(form),
         this.auth$.httpOptions());
   }

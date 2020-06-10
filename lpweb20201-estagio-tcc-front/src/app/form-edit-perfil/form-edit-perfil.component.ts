@@ -28,7 +28,6 @@ export class FormEditPerfilComponent implements OnInit {
   }
 
   editarPerfil(){
-      console.log(this.perfil)
     this.perfil$.editarPerfil(this.perfil).subscribe(
       user => {
         this.router.navigate(['/perfil']);

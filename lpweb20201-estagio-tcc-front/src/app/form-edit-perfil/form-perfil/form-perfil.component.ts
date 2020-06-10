@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { AuthService } from '../auth.service';
-import { UserService } from '../user.service';
+import { AuthService } from '../../auth.service';
+import { UserService } from '../../user.service';
 import { Router } from '@angular/router';
-import { PerfilService } from './../perfil.service';
+import { PerfilService } from '../../perfil.service';
 
 @Component({
   selector: 'app-form-perfil',
@@ -11,6 +11,7 @@ import { PerfilService } from './../perfil.service';
 })
 export class FormPerfilComponent implements OnInit {
   cadPerfil = {
+    "id":null,
     "usuario": null,
     "nome": null,
     "sexo": null,

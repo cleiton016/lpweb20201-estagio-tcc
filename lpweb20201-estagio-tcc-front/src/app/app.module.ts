@@ -12,7 +12,7 @@ import { PerfilComponent } from './perfil/perfil.component';
 import { LoginComponent } from './login/login.component';
 import { SobreComponent } from './sobre/sobre.component';
 import { PaginaNaoEncontradaComponent } from './pagina-nao-encontrada/pagina-nao-encontrada.component';
-import { FormPerfilComponent } from './form-perfil/form-perfil.component';
+import { FormPerfilComponent } from './form-edit-perfil/form-perfil/form-perfil.component';
 import { FormEditPerfilComponent } from './form-edit-perfil/form-edit-perfil.component';
 
 registerLocaleData(localePt, 'pt', localePtExtra);
